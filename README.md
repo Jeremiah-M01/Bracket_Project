@@ -8,3 +8,18 @@ The participants list is viewed as a perfect binary tree the length depending on
 
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/d66e0446-b033-47d6-a95c-bcf440747b82" />
 
+### Example Implementation:
+
+```
+List<FIFASoccerTeam> worldCup2014KnockoutRoundMatchups = Arrays.asList(BRAZIL, CHILE, COLOMBIA, URUGUAY, FRANCE, NIGERIA, GERMANY, ALGERIA, NETHERLANDS, MEXICO, COSTA_RICA, GREECE, ARGENTINA, SWITZERLAND, BELGIUM, USA);
+		
+worldCup2014KnockoutResults = new BracketImpl_Martinez<FIFASoccerTeam>(worldCup2014KnockoutRoundMatchups);
+worldCup2014KnockoutResults.setWinCount(GERMANY, 4);
+worldCup2014KnockoutResults.setWinCount(NETHERLANDS, 2);
+worldCup2014KnockoutResults.setWinCount(BRAZIL, 3);
+worldCup2014KnockoutResults.setWinCount(ARGENTINA, 1);
+worldCup2014KnockoutResults.setWinCount(COLOMBIA, 2);
+worldCup2014KnockoutResults.setWinCount(FRANCE, 1);
+worldCup2014KnockoutResults.setWinCount(COSTA_RICA, 1);
+```
+Here the FIFASoccerTeam is an enumerated class that contains the teams listed which is used to pass into the participants list. The next following lines are using setWinCount to change the state of the bracket. Here GERMANY will be the champion. For more examples in depth check out the test folder.
